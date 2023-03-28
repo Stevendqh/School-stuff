@@ -2,7 +2,7 @@
 # Author:           Steven Hoang
 # Assignment:       Assignment 1
 # Date:             3/25/23
-# Description:      Example: This program prompts the user for the guest's name, 
+# Description:      This program prompts the user for the guest's name, 
                     reservation date, reservation time, and number of guests. 
                     It then calculates the estimated dining time based on the 
                     number of guests and displays the reservation details along 
@@ -33,7 +33,7 @@ int main() {
     string date = "MM/DD/YYYY";
     string time = "HH:MM";
     int num_guests = 0;
-    const int avg_diner_time = 20;
+    const int AVG_DINER_TIME = 20;
     
     // Get user input
     cout << "Enter the guest's name: ";
@@ -46,7 +46,7 @@ int main() {
     cin >> num_guests;
     
     // Calculate average dining time
-    int dining_time_minutes = avg_diner_time * num_guests;
+    int dining_time_minutes = AVG_DINER_TIME * num_guests;
     int dining_time_hours = dining_time_minutes / 60;
     int dining_time_remaining_minutes = dining_time_minutes % 60;
 
