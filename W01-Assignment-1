@@ -29,8 +29,10 @@ using namespace std;
 
 int main() {
     // Reservation details
-    string name, date, time;
-    int num_guests;
+    string name = "name";
+    string date = "MM/DD/YYYY";
+    string time = "HH:MM";
+    int num_guests = 0;
     const int avg_diner_time = 20;
     
     // Get user input
