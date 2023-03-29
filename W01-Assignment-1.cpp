@@ -27,14 +27,18 @@
 
 using namespace std;
 
+const int AVG_DINER_TIME = 20;
+
 int main() {
     // Reservation details
     string name = "name";
     string date = "MM/DD/YYYY";
     string time = "HH:MM";
     int num_guests = 0;
-    const int AVG_DINER_TIME = 20;
-    
+    int dining_time_minutes = AVG_DINER_TIME * num_guests;
+    int dining_time_hours = dining_time_minutes / 60;
+    int dining_time_remaining_minutes = dining_time_minutes % 60;
+
     // Get user input
     cout << "Enter the guest's name: ";
     getline(cin, name);
@@ -45,14 +49,11 @@ int main() {
     cout << "Enter the number of guests: ";
     cin >> num_guests;
     
-    // Calculate average dining time
-    int dining_time_minutes = AVG_DINER_TIME * num_guests;
-    int dining_time_hours = dining_time_minutes / 60;
-    int dining_time_remaining_minutes = dining_time_minutes % 60;
-
     // Show reservation details
-    cout << endl << "Reservation confirmed for " << name << " on " << date << " at " << time << " for " << num_guests << " guests." << endl;
-    cout << "Estimated dining time: " << dining_time_hours << " hour(s) and " << dining_time_remaining_minutes << " minute(s)." << endl;
+    cout << endl << "Reservation confirmed for " << name << " on " << date 
+    << " at " << time << " for " << num_guests << " guests." << endl;
+    cout << "Estimated dining time: " << dining_time_hours << " hour(s) and " 
+    << dining_time_remaining_minutes << " minute(s)." << endl;
 
     return 0;
 }
